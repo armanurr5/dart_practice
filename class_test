@@ -1,0 +1,54 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(Employe());
+}
+
+class Employe extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: EmployeScreen(),
+    );
+  }
+}
+
+class EmployeScreen  extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+    appBar: AppBar(
+      title: Text("Add Employe"),
+    ),
+    body: Padding(padding: const EdgeInsets.all(16.0),
+       child: Column(
+         children: [
+           TextField(
+             decoration: InputDecoration(labelText: "Name") ,
+           ),
+           TextField(
+             decoration: InputDecoration(labelText: "Age"),
+             keyboardType: TextInputType.phone,
+           ),
+           SizedBox(height: 5),
+           TextField(
+             decoration: InputDecoration(labelText: "Salary"),
+             keyboardType: TextInputType.phone,
+           ),
+           SizedBox(height: 20),
+           ElevatedButton(onPressed: (){}, child: Text("Add Employee"))
+         ],
+       ),
+
+
+
+    ),
+
+
+
+
+    );
+  }
+}
